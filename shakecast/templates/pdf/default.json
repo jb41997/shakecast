@@ -4,6 +4,7 @@
         "banner": null,
         "icon": null
     },
+    "type": "pdf", 
     "summary": {},
     "table": {
         "table_head": [

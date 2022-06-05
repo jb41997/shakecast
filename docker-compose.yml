@@ -2,7 +2,9 @@ version: '3'
 
 services:
   sc-server:
-    image: usgs/shakecast:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
     environment:
       SHAKECAST_USER_ID: ${SHAKECAST_USER_ID}
       SC_DOCKER: 1
@@ -22,7 +24,9 @@ services:
     restart: unless-stopped
 
   web-server:
-    image: usgs/shakecast:latest
+    build: 
+      context: .
+      dockerfile: Dockerfile
     depends_on:
       - sc-server
     ports:
